@@ -4,6 +4,7 @@ import Axios from 'axios';
 import { UserOutlined } from '@ant-design/icons';
 import SideVideo from './SideVideo';
 import Comment from './Comment';
+import LikeDislike from './LikeDislike';
 
 
 function VideoDetailPage(props) {
@@ -46,12 +47,12 @@ function VideoDetailPage(props) {
     return (
         <Row>
             <Col lg={18} xs={24}>
-                <div className="postPage" style={{width:'100%', padding:'3rem 4rem'}}>
+                <div className="postPage" style={{width:'100%', padding:'3rem 2rem'}}>
                 <video style={{ width: '100%' }} src={`http://localhost:5000/${VideoDetail.filePath}`} controls></video>
 
                     <List.Item
-                             
-                        >
+                        actions={[ <LikeDislike video videoId={videoId} userId={localStorage.getItem("userId")} /> ]}>
+
                             <List.Item.Meta
                               avatar={
                                   <Avatar style={{background:'#87d068'}}

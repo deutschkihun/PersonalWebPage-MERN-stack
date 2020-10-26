@@ -2,6 +2,7 @@ import { Button } from 'antd'
 import Axios from 'axios'
 import React,{useState} from 'react'
 import SingleComment from './SingleComment';
+import ReplyComment from './ReplyComment';
 
 function Comment(props) {
 
@@ -16,12 +17,12 @@ function Comment(props) {
         event.preventDefault();
 
     const variable = {
-        comment : commentvalue,
+        content : commentvalue,
         writer : localStorage.getItem("userId"),
         videoId : props.videoId
     }
 
-        Axios.post('/api/comment/saveComments',variable)
+        Axios.post('/api/comment/saveComment',variable)
             .then(response => {
                 if(response.data.success){
                     setcommentvalue("")
@@ -31,6 +32,7 @@ function Comment(props) {
                 }
             })
     }
+    
     return (
         <div>
             <br/>
@@ -39,10 +41,12 @@ function Comment(props) {
 
             {/* Comment list */}
             {props.CommentLists && props.CommentLists.map((comment,index) => (
+                (!comment.responseTo &&
                 <React.Fragment>
-                    <SingleComment comment={comment} key={index} refreshfunction={props.refreshfunction} videoId={props.videoId}/>
+                    <SingleComment refreshfunction={props.refreshfunction} comment={comment} key={index} videoId={props.videoId}/>
+                    <ReplyComment refreshfunction={props.refreshfunction} parentCommentId={comment._id} videoId={props.videoId}  CommentLists={props.CommentLists} />
                 </React.Fragment>
-            ))}
+            )))}
 
 
 

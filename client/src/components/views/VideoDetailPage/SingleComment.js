@@ -1,61 +1,72 @@
 import React,{useState} from 'react'
 import {Comment, Avatar,Button,Input} from 'antd';
 import Axios from 'axios';
+import smallprofile from '../common/1.png';
+import {useSelector} from 'react-redux'
+import LikeDislike from './LikeDislike';
 
 function SingleComment(props) {
     
     
     
-    const [commentvalue, setcommentvalue] = useState("")
-    const [OpenReply, setOpenReply] = useState(false)
-
-    const onHandleChange = (event) => {
-        setcommentvalue(event.currentTarget.value)
-    }
-
+    const user = useSelector(state => state.user)
+    const [OpenReply, setOpenReply] = useState(false)  // true false = > &&   , null / notnull => ? 
+    const [commentValue, setcommentValue] = useState("")
+    
     const onClickReplayOpen = () => {
         setOpenReply(!OpenReply)
     }
-
+   
     const actions = [
-        <span onClick={onClickReplayOpen} key="comment-list-reply-to-0">Reply to</span>
+            <LikeDislike userId={localStorage.getItem("userId")} commentId={props.comment._id}/>,
+            <span onClick={onClickReplayOpen} key="comment-basic-reply-to">Reply to</span>
+
     ]
 
-    
-
-    const onSubmit = (event) => {
-        event.preventDefault();
-
-    const variable = {
-        comment : commentvalue,
-        writer : localStorage.getItem("userId"),
-        videoId : props.videoId
+    const onHandleChange = (event) => {
+        setcommentValue(event.currentTarget.value)
     }
 
-        Axios.post('/api/comment/saveComments',variable)
+    const onSubmit = (event) => { 
+        event.preventDefault();
+        // refresh(default) prevent
+
+        const variable = {
+            content : commentValue,
+            writer : user.userData._id, 
+            videoId : props.videoId,
+            responseTo : props.comment._id
+        }
+
+        Axios.post('/api/comments/saveComment',variable)
             .then(response => {
                 if(response.data.success){
-                    setcommentvalue("")
+                    setcommentValue("")
+                    setOpenReply(!OpenReply) // or setOpenReply(false)
                     props.refreshfunction(response.data.result)
-                }else{ 
-                    alert('fail to save comment')
+                }else{
+                    alert('Faild to submit')
                 }
             })
     }
     
     return (
         <div>
-            {console.log(props.comment)}
             <Comment
-             
+                actions={actions}
+                author={props.comment._id.name}
+                avatar={<Avatar
+                        src={smallprofile}
+                        alt="image"/>}
+                content={<p> {props.comment.content}</p>}
             />
-
-            {OpenReply && 
+            
+        {OpenReply && 
             <form style={{display:'flex'}} onSubmit={onSubmit}>
             <textarea
                 style={{ width: '100%', borderRadius:'5px'}}
                 onChange={onHandleChange}
-                value={commentvalue}
+                value={commentValue}
                 placeholder="write your comment"
             />
             <br />
@@ -65,6 +76,4 @@ function SingleComment(props) {
         </div>
     )
 }
-s
-{/* https://ant.design/components/comment/#header*/}
-export default SingleComment
+ export default SingleComment

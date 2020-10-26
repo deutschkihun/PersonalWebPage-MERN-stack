@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import { FaCode } from "react-icons/fa";
-import ProfilePicture from '../common/image/45092135.png'
+import ProfilePicture from '../common/45092135.png'
 import {Row,Typography,Avatar,Col,Card} from 'antd';
 import Axios from 'axios';
 import { UserOutlined } from '@ant-design/icons';
@@ -46,8 +46,8 @@ function LandingPage() {
             avatar={
                 <Avatar 
                 style={{backgroundColor: '#87d068'}}
-                icon={<UserOutlined />}
-                src={video.writer.image} />
+                icon={<UserOutlined/>}
+                />
             }
             title={video.title}
         />

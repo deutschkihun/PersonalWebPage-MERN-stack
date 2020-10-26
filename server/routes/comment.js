@@ -15,7 +15,7 @@ router.post("/getComments", (req,res) =>{
 
 
 
-router.post("/saveComments", (req,res) =>{
+router.post("/saveComment", (req,res) =>{
   
    const comment = new Comment(req.body)
    comment.save((err,comment) => {
