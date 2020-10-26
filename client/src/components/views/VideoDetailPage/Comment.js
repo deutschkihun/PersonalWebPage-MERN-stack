@@ -1,8 +1,9 @@
-import { Button } from 'antd'
+import { Button,Input } from 'antd'
 import Axios from 'axios'
 import React,{useState} from 'react'
 import SingleComment from './SingleComment';
 import ReplyComment from './ReplyComment';
+const {TextArea} = Input;
 
 function Comment(props) {
 
@@ -37,7 +38,22 @@ function Comment(props) {
         <div>
             <br/>
             <p>Replies</p>
-            <br/>       
+            <br/>   
+
+            {/* Text box with submit */}
+            <form onSubmit={onSubmit}>
+            <TextArea 
+                style={{ width: '100%', borderRadius:'5px'}}
+                onChange={onTextArea}
+                value={commentvalue}
+                placeholder="write your comment"
+                rows={4} 
+            />
+            <br/>
+            <Button style={{ width:'10%', height:'35px',marginTop:'0.5rem',float:'right',
+                             backgroundColor:'#1890ff',color:'white',fontSize:'16px'}} onClick={onSubmit} >Submit</Button>            
+            </form>
+    
 
             {/* Comment list */}
             {props.CommentLists && props.CommentLists.map((comment,index) => (
@@ -47,22 +63,6 @@ function Comment(props) {
                     <ReplyComment refreshfunction={props.refreshfunction} parentCommentId={comment._id} videoId={props.videoId}  CommentLists={props.CommentLists} />
                 </React.Fragment>
             )))}
-
-
-
-            {/* Text box with submit */}
-             <form style={{display:'flex'}} onSubmit>
-                 <textarea
-                    style={{width:'100%', borderRadius:'5px'}}
-                    onChange={onTextArea}
-                    value={commentvalue}
-                    placeholder="write your comment here"
-                 >
-                 </textarea>
-                 <br/>
-                 <Button style={{width:'10%',height:'52px'}} onClick={onSubmit}>Submit</Button>
-             </form>
-
 
         </div>
     )

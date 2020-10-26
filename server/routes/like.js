@@ -24,7 +24,7 @@ router.post('/getlikes', (req,res)=>{
 
 
 
-router.post('/getdislike', (req,res)=>{
+router.post('/getdislikes', (req,res)=>{
 
     let variable = {}
     if(req.body.videoId){

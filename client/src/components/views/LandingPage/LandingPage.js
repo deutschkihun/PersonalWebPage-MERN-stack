@@ -1,10 +1,11 @@
 import React,{useState,useEffect} from 'react'
 import { FaCode } from "react-icons/fa";
-import ProfilePicture from '../common/45092135.png'
+import profile from '../common/profile.png'
 import {Row,Typography,Avatar,Col,Card} from 'antd';
 import Axios from 'axios';
-import { UserOutlined } from '@ant-design/icons';
+import { UserOutlined,GithubFilled,LinkedinFilled,MailFilled } from '@ant-design/icons';
 import moment from 'moment'
+import MainImage from '../common/MainImage.jpg'
 const {Title} = Typography;
 const {Meta} = Card;
 function LandingPage() {
@@ -61,22 +62,52 @@ function LandingPage() {
         
         <div style={{width:'100%',margin:'0'}}>
             {/*Main Image*/}
-                <div style={{background:`linear-gradient(to bottom, rgba(0,0,0,0)
+                <div style={{background: `linear-gradient(to bottom, rgba(0,0,0,0)
                 39%,rgba(0,0,0,0)
                 41%,rgba(0,0,0,0.65)
-                100%),#1c1c1c`,
-                height: '500px',
+                100%),
+                url('${MainImage}'), #1c1c1c`,
+                height: '700px',
                 backgroundSize: '100%, cover',
                 backgroundPosition: 'center, center',
                 width: '100%',
                 position: 'relative'}}>
-                    <img src={ProfilePicture} alt="profile picture"/>
-
+                    <div style={{padding: '3rem'}}>
+                    <img src={profile} alt="profile"/>
+                    </div>
 
                 <div>
-                    <div style={{position:'absolute',maxWidth:'500px',bottom:'2rem',marginLeft:'2rem'}}>
-                        <h2 style={{color:'white'}}>Hello everyone</h2>
-                        <p style={{color:'white',fontSize:'1rem'}}>welcome to my webpage</p>
+                    <div style={{position:'absolute',maxWidth:'500px',bottom:'3rem',marginLeft:'4rem'}}>
+                        <h1 style={{color:'white',fontSize:'3rem',lineHeight:'8px'}} >Kihun Kim</h1>
+                        <br/>
+                        <p style={{color:'white',fontSize:'1.5rem'}}>Coding Enthusiast</p>
+                        <a href="https://github.com/deutschkihun">
+                            <Meta
+                                avatar={
+                                <Avatar 
+                                    style={{backgroundColor: '#1c1c1c'}}  
+                                    icon={<GithubFilled />}
+                                />}
+                                />
+                        </a>
+                        <pre>  </pre>
+                        <a href="https://www.linkedin.com/in/kihun-kim-b35b73174/">
+                        <Meta
+                            avatar={
+                            <Avatar 
+                                style={{backgroundColor: '#1c1c1c'}}  
+                                icon={<LinkedinFilled />}
+                               />}
+                            />
+                            </a>
+                        <pre>  </pre>
+                         <Meta
+                            avatar={
+                            <Avatar 
+                                style={{backgroundColor: '#1c1c1c'}}  
+                                icon={ <MailFilled />}
+                               />}
+                            />
                     </div>
                 </div>
                 </div>

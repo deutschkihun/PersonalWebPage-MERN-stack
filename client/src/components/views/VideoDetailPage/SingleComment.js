@@ -4,6 +4,8 @@ import Axios from 'axios';
 import smallprofile from '../common/1.png';
 import {useSelector} from 'react-redux'
 import LikeDislike from './LikeDislike';
+const { TextArea } = Input;
+
 
 function SingleComment(props) {
     
@@ -19,7 +21,8 @@ function SingleComment(props) {
    
     const actions = [
             <LikeDislike userId={localStorage.getItem("userId")} commentId={props.comment._id}/>,
-            <span onClick={onClickReplayOpen} key="comment-basic-reply-to">Reply to</span>
+            <pre>  </pre>,
+            <span onClick={onClickReplayOpen} key="comment-basic-reply-to">REPLY</span>
 
     ]
 
@@ -38,7 +41,7 @@ function SingleComment(props) {
             responseTo : props.comment._id
         }
 
-        Axios.post('/api/comments/saveComment',variable)
+        Axios.post('/api/comment/saveComment',variable)
             .then(response => {
                 if(response.data.success){
                     setcommentValue("")
@@ -61,17 +64,21 @@ function SingleComment(props) {
                 content={<p> {props.comment.content}</p>}
             />
             
-        {OpenReply && 
-            <form style={{display:'flex'}} onSubmit={onSubmit}>
-            <textarea
+       {OpenReply && 
+          
+            <form onSubmit={onSubmit}>
+            <TextArea 
                 style={{ width: '100%', borderRadius:'5px'}}
                 onChange={onHandleChange}
                 value={commentValue}
                 placeholder="write your comment"
+                rows={4} 
             />
-            <br />
-            <Button style={{ width:'20%', height:'52px'}} onClick={onSubmit} >Submit</Button>
+            <br/>
+            <Button style={{ width:'10%', height:'35px',marginTop:'0.5rem',float:'right',
+                             backgroundColor:'#1890ff',color:'white',fontSize:'16px'}} onClick={onSubmit} >Submit</Button>
             </form>
+
         }
         </div>
     )

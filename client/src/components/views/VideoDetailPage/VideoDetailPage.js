@@ -57,7 +57,7 @@ function VideoDetailPage(props) {
                               avatar={
                                   <Avatar style={{background:'#87d068'}}
                                           icon={<UserOutlined/>}
-                                          src={VideoDetail.writer && VideoDetail.writer.image}/>}
+                                          />}
                               title={VideoDetail.title}
                               description={VideoDetail.description}
                             />

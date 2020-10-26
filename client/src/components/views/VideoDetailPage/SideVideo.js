@@ -25,8 +25,8 @@ function SideVideo() {
         var minutes = Math.floor(sidevideo.duration / 60);
         var seconds = Math.floor(sidevideo.duration - minutes * 60);
 
-        return <div key={index} style={{display:'flex',marginBottom:'1rem', padding:'3rem 1rem'}}>
-        <div style={{width:'60%',marginRight:'1rem'}}>
+        return <div key={index} style={{display:'flex',marginTop:'3rem',marginBottom:'1rem'}}>
+        <div style={{width:'300px',height:'120px',marginRight:'1rem'}}>
         <a href={`${sidevideo._id}`} style={{color:'blue'}} >
             <img style={{width:'100%', height:'100%'}} src={`http://localhost:5000/${sidevideo.thumbnail}`} alt="thumbnail"/>
         </a>
