@@ -3,7 +3,7 @@ import { FaCode } from "react-icons/fa";
 import profile from '../common/profile.png'
 import {Row,Typography,Avatar,Col,Card} from 'antd';
 import Axios from 'axios';
-import { UserOutlined,GithubFilled,LinkedinFilled,MailFilled } from '@ant-design/icons';
+import { UserOutlined,GithubFilled,LinkedinFilled,MailFilled} from '@ant-design/icons';
 import moment from 'moment'
 import MainImage from '../common/MainImage.jpg'
 const {Title} = Typography;
@@ -24,10 +24,11 @@ function LandingPage() {
         })
     }, [])
 
+  
     const renderCards = Video.map((video,index) => {
-
         var minutes = Math.floor(video.duration / 60);
         var seconds = Math.floor(video.duration - minutes * 60);
+     
         // defautl value of duration is second
 
         return <Col lg={8} md={12} xs={24}>
@@ -76,38 +77,36 @@ function LandingPage() {
                     <img src={profile} alt="profile"/>
                     </div>
 
+                    <div style={{position:'absolute',marginLeft:'50rem',bottom:'20rem'}} >
+                    <FaCode style={{ fontSize: '4rem',color:'black',lineHeight:'8px'}} />Life Motto<FaCode style={{ fontSize: '4rem',color:'black',lineHeight:'8px'}}/>
+                    <h1 style={{color:'white',fontSize:'3rem',lineHeight:'8px'}} >your efforts will never betray you</h1>
+                    </div>
+
                 <div>
-                    <div style={{position:'absolute',maxWidth:'500px',bottom:'3rem',marginLeft:'4rem'}}>
+                    <div style={{position:'absolute',maxWidth:'500px',bottom:'3rem',marginLeft:'5rem'}}>
                         <h1 style={{color:'white',fontSize:'3rem',lineHeight:'8px'}} >Kihun Kim</h1>
                         <br/>
                         <p style={{color:'white',fontSize:'1.5rem'}}>Coding Enthusiast</p>
-                        <a href="https://github.com/deutschkihun">
-                            <Meta
-                                avatar={
-                                <Avatar 
-                                    style={{backgroundColor: '#1c1c1c'}}  
-                                    icon={<GithubFilled />}
-                                />}
-                                />
-                        </a>
-                        <pre>  </pre>
-                        <a href="https://www.linkedin.com/in/kihun-kim-b35b73174/">
-                        <Meta
-                            avatar={
-                            <Avatar 
+                        <div>
+                            <a href="https://github.com/deutschkihun" target="_blank">
+                            <Avatar
+                                style={{backgroundColor: '#1c1c1c'}}  
+                                icon={<GithubFilled />}
+                            />   
+                            </a>
+                            <a href="https://www.linkedin.com/in/kihun-kim-b35b73174/" target="_blank">
+                            <Avatar
                                 style={{backgroundColor: '#1c1c1c'}}  
                                 icon={<LinkedinFilled />}
-                               />}
+                            />  
+                            </a>
+                            <a href="mailto:deutschkihun@gmail.com">
+                            <Avatar
+                                style={{backgroundColor: '#1c1c1c'}}  
+                                icon={<MailFilled />}
                             />
                             </a>
-                        <pre>  </pre>
-                         <Meta
-                            avatar={
-                            <Avatar 
-                                style={{backgroundColor: '#1c1c1c'}}  
-                                icon={ <MailFilled />}
-                               />}
-                            />
+                        </div>
                     </div>
                 </div>
                 </div>
@@ -115,7 +114,6 @@ function LandingPage() {
                 <br/>
                 <br/>
                 <br/>
-
 
                <div style={{ width: '85%', margin: '1rem auto',justifyContent:'center' }}>
                 <Title level={1}>Introduction video</Title>
@@ -127,34 +125,6 @@ function LandingPage() {
                 </Row>
                
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <div>
-                <div className="app">
-                    <FaCode style={{ fontSize: '4rem' }} /><br />
-                    <span style={{ fontSize: '2rem' }}>The Result Never Betrays The Effort</span>
-                </div>
-
-                <div style={{ float: 'right' }}>
-                    Kihun kim
-                </div>
-                </div>
         </div> 
           
     )
