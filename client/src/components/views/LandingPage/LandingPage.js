@@ -73,19 +73,13 @@ function LandingPage() {
                 backgroundPosition: 'center, center',
                 width: '100%',
                 position: 'relative'}}>
-                    <div style={{padding: '3rem'}}>
+                    <div style={{padding: '3rem',marginLeft:'3rem'}}>
                     <img src={profile} alt="profile"/>
                     </div>
 
-                    <div style={{position:'absolute',marginLeft:'50rem',bottom:'20rem'}} >
-                    <FaCode style={{ fontSize: '4rem',color:'black',lineHeight:'8px'}} />Life Motto<FaCode style={{ fontSize: '4rem',color:'black',lineHeight:'8px'}}/>
-                    <h1 style={{color:'white',fontSize:'3rem',lineHeight:'8px'}} >your efforts will never betray you</h1>
-                    </div>
-
                 <div>
-                    <div style={{position:'absolute',maxWidth:'500px',bottom:'3rem',marginLeft:'5rem'}}>
+                    <div style={{position:'absolute',maxWidth:'1000px',bottom:'5rem',marginLeft:'11rem',fontFamily:'Comic Sans MS, Comic Sans, cursive',color:'white'}}>
                         <h1 style={{color:'white',fontSize:'3rem',lineHeight:'8px'}} >Kihun Kim</h1>
-                        <br/>
                         <p style={{color:'white',fontSize:'1.5rem'}}>Coding Enthusiast</p>
                         <div>
                             <a href="https://github.com/deutschkihun" target="_blank">
@@ -109,21 +103,36 @@ function LandingPage() {
                         </div>
                     </div>
                 </div>
-                </div>
+                </div>  
                 <br/>
                 <br/>
-                <br/>
-                <br/>
+                <div className="app">
+                <FaCode style={{ fontSize: '4rem' }} /><br />
+                <span style={{ fontSize: '2rem' ,fontFamily:'Comic Sans MS, Comic Sans, cursive'}}>MY CODING EFFORT WON'T BETRAY MYSELF.... NEVER GIVE UP!</span>
 
+                <br/>
+                <br/>
                <div style={{ width: '85%', margin: '1rem auto',justifyContent:'center' }}>
-                <Title level={1}>Introduction video</Title>
+                <Title level={2} style={{fontFamily:'Comic Sans MS, Comic Sans, cursive'}}>INTRODUCTION VIDEO</Title>
                 <hr />
 
                 {/*Introvideo video card component*/}
                 <Row gutter={[16,16]}>
                     {renderCards}
                 </Row>
-               
+
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+
+                <Title level={2} style={{fontFamily:'Comic Sans MS, Comic Sans, cursive'}}>3 IMPORTANT THINGS ABOUT ME</Title>
+                {/*Card section*/}
+                <hr/>
+
+
+            </div>
             </div>
         </div> 
           
