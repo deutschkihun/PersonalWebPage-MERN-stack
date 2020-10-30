@@ -4,8 +4,10 @@ import profile from '../common/profile.png'
 import {Row,Typography,Avatar,Col,Card} from 'antd';
 import Axios from 'axios';
 import { UserOutlined,GithubFilled,LinkedinFilled,MailFilled} from '@ant-design/icons';
+import WIWI from '../common/WIWI.jpg';
 import moment from 'moment'
 import MainImage from '../common/MainImage.jpg'
+import '../../../index.css';
 const {Title} = Typography;
 const {Meta} = Card;
 function LandingPage() {
@@ -28,22 +30,17 @@ function LandingPage() {
     const renderCards = Video.map((video,index) => {
         var minutes = Math.floor(video.duration / 60);
         var seconds = Math.floor(video.duration - minutes * 60);
-     
-        // defautl value of duration is second
-
         return <Col lg={8} md={12} xs={24}>
         <div key={index} style={{ position: 'relative' }}>
             <a href={`/video/${video._id}`} >
-            <img style={{ width: '100%' }} alt="thumbnail" src={`http://localhost:5000/${video.thumbnail}`} />
-            <div className=" duration"
-                style={{ bottom: 0, right:0, position: 'absolute', margin: '4px', 
-                color: '#fff', backgroundColor: 'rgba(17, 17, 17, 0.8)', opacity: 0.8, 
-                padding: '2px 4px', borderRadius:'2px', letterSpacing:'0.5px', fontSize:'12px',
-                fontWeight:'500', lineHeight:'12px' }}>
-                <span>{minutes} : {seconds}</span>
-            </div>
+                <img style={{ width: '100%' }} alt="thumbnail" src={`http://localhost:5000/${video.thumbnail}`} />
+                <div className="duration">
+                    <span>{minutes} : {seconds}</span>
+                </div>
             </a>
-        </div><br />
+        </div>
+        <br />
+
         <Meta
             avatar={
                 <Avatar 
@@ -60,81 +57,80 @@ function LandingPage() {
     })
 
     return (
-        
-        <div style={{width:'100%',margin:'0'}}>
-            {/*Main Image*/}
-                <div style={{background: `linear-gradient(to bottom, rgba(0,0,0,0)
-                39%,rgba(0,0,0,0)
-                41%,rgba(0,0,0,0.65)
-                100%),
-                url('${MainImage}'), #1c1c1c`,
-                height: '700px',
-                backgroundSize: '100%, cover',
-                backgroundPosition: 'center, center',
-                width: '100%',
-                position: 'relative'}}>
+        <div>
+
+        {/*Main Image*/}
+                 <div style={   {background: `linear-gradient(to bottom, rgba(0,0,0,0)39%, rgba(0,0,0,0)41%, rgba(0,0,0,0.65) 100% ),
+                                url('${MainImage}'), #1c1c1c`,
+                                height: '700px',
+                                backgroundSize: '100%, cover',
+                                backgroundPosition: 'center, center',
+                                width: '100%',
+                                position: 'relative'}}>
+
                     <div style={{padding: '3rem',marginLeft:'3rem'}}>
                     <img src={profile} alt="profile"/>
                     </div>
 
-                <div>
-                    <div style={{position:'absolute',maxWidth:'1000px',bottom:'5rem',marginLeft:'11rem',fontFamily:'Comic Sans MS, Comic Sans, cursive',color:'white'}}>
-                        <h1 style={{color:'white',fontSize:'3rem',lineHeight:'8px'}} >Kihun Kim</h1>
-                        <p style={{color:'white',fontSize:'1.5rem'}}>Coding Enthusiast</p>
-                        <div>
+                    <div className="description">
+                        <h1>Kihun Kim</h1>
+                        <p>Coding Enthusiast</p>
                             <a href="https://github.com/deutschkihun" target="_blank">
                             <Avatar
                                 style={{backgroundColor: '#1c1c1c'}}  
                                 icon={<GithubFilled />}
-                            />   
-                            </a>
+                            /> </a>
+
                             <a href="https://www.linkedin.com/in/kihun-kim-b35b73174/" target="_blank">
                             <Avatar
                                 style={{backgroundColor: '#1c1c1c'}}  
                                 icon={<LinkedinFilled />}
-                            />  
-                            </a>
+                            /> </a>
+
                             <a href="mailto:deutschkihun@gmail.com">
                             <Avatar
                                 style={{backgroundColor: '#1c1c1c'}}  
                                 icon={<MailFilled />}
-                            />
-                            </a>
-                        </div>
+                            /></a>
                     </div>
-                </div>
                 </div>  
-                <br/>
-                <br/>
+                
+                {/* life motto*/}
                 <div className="app">
-                <FaCode style={{ fontSize: '4rem' }} /><br />
-                <span style={{ fontSize: '2rem' ,fontFamily:'Comic Sans MS, Comic Sans, cursive'}}>MY CODING EFFORT WON'T BETRAY MYSELF.... NEVER GIVE UP!</span>
+                    <p><FaCode style={{ fontSize: '1.5rem' }} /> LIFE MOTTO <FaCode style={{ fontSize: '1.5rem' }} /></p>
+                    <span>YOUR EFFORT WON'T BETRAY YOU.... NEVER GIVE UP!</span>
+                </div>
 
-                <br/>
-                <br/>
-               <div style={{ width: '85%', margin: '1rem auto',justifyContent:'center' }}>
-                <Title level={2} style={{fontFamily:'Comic Sans MS, Comic Sans, cursive'}}>INTRODUCTION VIDEO</Title>
+               <div className="title">
+                <Title level={2}>INTRODUCTION VIDEO</Title>
                 <hr />
 
-                {/*Introvideo video card component*/}
+                {/*video*/}
                 <Row gutter={[16,16]}>
                     {renderCards}
                 </Row>
-
-                <br/>
-                <br/>
                 <br/>
                 <br/>
                 <br/>
 
                 <Title level={2} style={{fontFamily:'Comic Sans MS, Comic Sans, cursive'}}>3 IMPORTANT THINGS ABOUT ME</Title>
-                {/*Card section*/}
                 <hr/>
+                <br/>
+                <br/>
+                <br/>
 
+                <div className="keypoint">
+                    <img src={WIWI} alt="industrial engineering icon"/>
+                        <h2>Industrial engineering student</h2>
+                        <p>Industfwefwfwefwefwefwefwefwefwefiria</p>
+                    </div>
+                </div>
+
+               
+
+            <br/><br/><br/><br/><br/><br/><br/>
 
             </div>
-            </div>
-        </div> 
           
     )
 }
