@@ -28,6 +28,7 @@ body {
   align-items: center;
   height: 50vh;
   font-family: Comic Sans MS, Comic Sans, cursive;
+  background-color: #f1f5f8;
 }
 
 .app p {

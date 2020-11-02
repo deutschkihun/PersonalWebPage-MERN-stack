@@ -4,7 +4,6 @@ import profile from '../common/profile.png'
 import {Row,Typography,Avatar,Col,Card} from 'antd';
 import Axios from 'axios';
 import { UserOutlined,GithubFilled,LinkedinFilled,MailFilled} from '@ant-design/icons';
-import WIWI from '../common/WIWI.jpg';
 import moment from 'moment'
 import MainImage from '../common/MainImage.jpg'
 import '../../../index.css';
@@ -58,7 +57,6 @@ function LandingPage() {
 
     return (
         <div>
-
         {/*Main Image*/}
                  <div style={   {background: `linear-gradient(to bottom, rgba(0,0,0,0)39%, rgba(0,0,0,0)41%, rgba(0,0,0,0.65) 100% ),
                                 url('${MainImage}'), #1c1c1c`,
@@ -95,12 +93,16 @@ function LandingPage() {
                     </div>
                 </div>  
                 
-                {/* life motto*/}
+                <div>
+                      {/* life motto*/}
                 <div className="app">
                     <p><FaCode style={{ fontSize: '1.5rem' }} /> LIFE MOTTO <FaCode style={{ fontSize: '1.5rem' }} /></p>
-                    <span>YOUR EFFORT WON'T BETRAY YOU.... NEVER GIVE UP!</span>
+                    <span>IT IS NEVER TOO LATE TO BE WHAT YOU MIGHT HAVE BEEN</span>
                 </div>
-
+                
+                <br/>
+                <br/>
+                <br/>
                <div className="title">
                 <Title level={2}>INTRODUCTION VIDEO</Title>
                 <hr />
@@ -112,24 +114,8 @@ function LandingPage() {
                 <br/>
                 <br/>
                 <br/>
-
-                <Title level={2} style={{fontFamily:'Comic Sans MS, Comic Sans, cursive'}}>3 IMPORTANT THINGS ABOUT ME</Title>
-                <hr/>
-                <br/>
-                <br/>
-                <br/>
-
-                <div className="keypoint">
-                    <img src={WIWI} alt="industrial engineering icon"/>
-                        <h2>Industrial engineering student</h2>
-                        <p>Industfwefwfwefwefwefwefwefwefwefiria</p>
-                    </div>
                 </div>
-
-               
-
-            <br/><br/><br/><br/><br/><br/><br/>
-
+                </div>
             </div>
           
     )

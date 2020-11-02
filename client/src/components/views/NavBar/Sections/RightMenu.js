@@ -25,7 +25,7 @@ function RightMenu(props) {
 
   if (user.userData && !user.userData.isAuth) {
     return (
-      <Menu mode={props.mode} style={{fontFamily:'Comic Sans MS, Comic Sans, cursive'}}>
+      <Menu mode={props.mode} style={{fontFamily:'Comic Sans MS, Comic Sans, cursive',backgroundColor:'rgb(223 223 226)'}}>
         <Menu.Item key="mail">
           <a href="/login">Signin</a>
         </Menu.Item>
