@@ -7,6 +7,7 @@ import { UserOutlined,GithubFilled,LinkedinFilled,MailFilled} from '@ant-design/
 import moment from 'moment'
 import MainImage from '../common/MainImage.jpg'
 import '../../../index.css';
+
 const {Title} = Typography;
 const {Meta} = Card;
 function LandingPage() {
@@ -33,7 +34,10 @@ function LandingPage() {
         <div key={index} style={{ position: 'relative' }}>
             <a href={`/video/${video._id}`} >
                 <img style={{ width: '100%' }} alt="thumbnail" src={`http://localhost:5000/${video.thumbnail}`} />
-                <div className="duration">
+                <div style={{
+                    bottom:"0", right:"0",position:"absolute",margin:'4px',color:'#fff',backgroundColor:'rgba(17,17,17,0.8)',
+                    opacity:'0.8',padding:'2px 4px',borderRadius:'2px',letterSpacing:'0.5px',fontSize:'12px',fontWeight:'500',lineHeight:'12px'
+                }}>
                     <span>{minutes} : {seconds}</span>
                 </div>
             </a>
@@ -70,9 +74,10 @@ function LandingPage() {
                     <img src={profile} alt="profile"/>
                     </div>
 
-                    <div className="description">
-                        <h1>Kihun Kim</h1>
-                        <p>Coding Enthusiast</p>
+                    <div style={{position:'absolute',maxWidth:'1000px',bottom:'5rem',marginLeft:'11rem',
+                    fontFamily:"Comic Sans MS, Comic Sans, cursive",color:'white'}}>
+                        <h1 style={{color:'white',fontSize:'3rem',lineHeight:'8px'}}>Kihun Kim</h1>
+                        <p style={{fontSize:'1.5rem'}}>Coding Enthusiast</p>
                             <a href="https://github.com/deutschkihun" target="_blank">
                             <Avatar
                                 style={{backgroundColor: '#1c1c1c'}}  
@@ -95,15 +100,23 @@ function LandingPage() {
                 
                 <div>
                       {/* life motto*/}
-                <div className="app">
-                    <p><FaCode style={{ fontSize: '1.5rem' }} /> LIFE MOTTO <FaCode style={{ fontSize: '1.5rem' }} /></p>
-                    <span>IT IS NEVER TOO LATE TO BE WHAT YOU MIGHT HAVE BEEN</span>
+                <br/>
+                <br/>
+                <br/>
+                <div className="app1">
+                    <p style={{marginLeft:'33rem',fontSize:'2rem', fontFamily:'Comic Sans MS, Comic Sans, cursive'}}>
+                        <FaCode style={{ fontSize: '1.5rem' }} /> LIFE MOTTO <FaCode style={{ fontSize: '1.5rem' }} />
+                    </p>
+                    <span style={{marginLeft:'16rem',fontSize:'2rem', fontFamily:'Comic Sans MS, Comic Sans, cursive'}}>
+                      YOUR EFFORT WONT'T BETRAY YOU NEVER GIVE UP </span>
                 </div>
-                
                 <br/>
                 <br/>
                 <br/>
-               <div className="title">
+                <br/>
+
+
+               <div style={{width:'85%',margin:'1rem auto ',justifyContent:'center',fontFamily:'Comic Sans MS, Comic Sans, cursive'}}>
                 <Title level={2}>INTRODUCTION VIDEO</Title>
                 <hr />
 
@@ -114,10 +127,11 @@ function LandingPage() {
                 <br/>
                 <br/>
                 <br/>
+                <br/>
+
                 </div>
                 </div>
             </div>
-          
     )
 }
 

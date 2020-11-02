@@ -114,10 +114,11 @@ footer > nav {
   display: inline-block;
   margin-left: 15px;
   margin-right: 50px;
+  font-family: Comic Sans MS, Comic Sans, cursive;
 }
 
 .nav_items ul > li:nth-child(-n + 4) > a {
-  color: #03cf5d;
+  color: black;
 }
 
 .nav_items ul > li > a {

@@ -11,7 +11,7 @@ function Footer() {
                 <div className="nav_items">
                     <ul>
                         <li><a href="/">Home  </a></li>
-                        <li><a href="/career">About me  </a></li>
+                        <li><a href="/career">Career</a></li>
                         <li><a href="/album">Album  </a></li>
                     </ul>
                 </div>
@@ -34,7 +34,8 @@ function Footer() {
                             icon={<MailFilled />}
                          /></a>
             </span>
-           <p> <Avatar style={{backgroundColor: '#1c1c1c'}}  icon={<CopyrightOutlined />}/> 2020 Kihun Kim. All rights reserved.</p>
+           <p style={{fontFamily:'Comic Sans MS, Comic Sans, cursive'}}> <Avatar style={{backgroundColor: '#1c1c1c'}}  icon={<CopyrightOutlined />}/> 
+            2020 Kihun Kim. All rights reserved.</p>
         </div>
     )
 }

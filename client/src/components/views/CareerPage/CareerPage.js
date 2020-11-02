@@ -1,22 +1,38 @@
 import React from 'react'
+import '../../../main.css'
 
 function CareerPage() {
     return (
         <div>
             <main>
+            <div>
+                <br/>
+                <br/> 
+                <br/>
+                <br/>
+                <br/> 
+            </div>
                 <div className="main-container">
-                    <div className="temp box box-one"></div>
-                    <div className="temp box box-two"></div>
-                    <div className="temp box box-three"></div>
-                    <div className="temp box box-four"></div>
-                    <div className="temp box box-five"></div>
-                    <div className="temp box box-six"></div>
-                    <div className="temp box box-seven"></div>
-                    <div className="temp box box-eight"></div>
-                    <div className="temp box box-nine"></div>
-                    <div className="temp box box-ten"></div>
-                    <div className="temp box box-eleven"></div>
+                    <div className=" box-one">1</div>
+                    <div className=" box-two">2</div>
+                    <div className=" box-three">3</div>
+                    <div className=" box-four">4</div>
+                    <div className=" box-five">5</div>
+                    <div className=" box-six">6</div>
+                    <div className=" box-seven">7</div>
+                    <div className=" box-eight">8</div>
+                    <div className=" box-nine">9</div>
+                    <div className=" box-ten">10</div>
+                    <div className=" box-eleven">11</div>
                 </div>
+             <div>
+                <br/>
+                <br/> 
+                <br/>
+                <br/>
+                <br/> 
+            </div>
+
             </main>
         </div>
     )

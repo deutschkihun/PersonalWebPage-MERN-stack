@@ -1,0 +1,112 @@
+main {
+  background: white;
+  min-height: 700px;
+}
+.main-container {
+  width: 1080px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 균일한 크기로 3등분 */
+  grid-template-rows: repeat(
+    4,
+    280px
+  ); /* 40px로 24등분 -> <main> 영역의 전체 height가 계산된다면 height 지정 후 1fr로 사용하셔도 좋습니다.*/
+  gap: 10px;
+}
+
+.box-one {
+  background: skyblue;
+  text-align: center;
+  font-size: 30px;
+  border: 1px solid #dee3eb;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.box-two {
+  background: skyblue;
+  text-align: center;
+  font-size: 30px;
+  border: 1px solid #dee3eb;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+.box-three {
+  background: skyblue;
+  text-align: center;
+  font-size: 30px;
+  border: 1px solid #dee3eb;
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+.box-four {
+  background: skyblue;
+  text-align: center;
+  font-size: 30px;
+  border: 1px solid #dee3eb;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+.box-five {
+  background: skyblue;
+  text-align: center;
+  font-size: 30px;
+  border: 1px solid #dee3eb;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+.box-six {
+  background: skyblue;
+  text-align: center;
+  font-size: 30px;
+  border: 1px solid #dee3eb;
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+.box-seven {
+  background: skyblue;
+  text-align: center;
+  font-size: 30px;
+  border: 1px solid #dee3eb;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+.box-eight {
+  background: skyblue;
+  text-align: center;
+  font-size: 30px;
+  border: 1px solid #dee3eb;
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+.box-nine {
+  background: skyblue;
+  text-align: center;
+  font-size: 30px;
+  border: 1px solid #dee3eb;
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
+.box-ten {
+  background: skyblue;
+  text-align: center;
+  font-size: 30px;
+  border: 1px solid #dee3eb;
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+}
+.box-eleven {
+  background: skyblue;
+  text-align: center;
+  font-size: 30px;
+  border: 1px solid #dee3eb;
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+}
+.box-twelve {
+  background: skyblue;
+  text-align: center;
+  font-size: 30px;
+  border: 1px solid #dee3eb;
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
+}
