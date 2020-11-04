@@ -3,7 +3,7 @@ import { Menu } from 'antd';
 
 function LeftMenu(props) {
   return (
-    <Menu mode={props.mode} style={{fontFamily:'Comic Sans MS, Comic Sans, cursive',backgroundColor:'rgb(223 223 226)'}}>
+    <Menu mode={props.mode} style={{fontFamily:'Comic Sans MS, Comic Sans, cursive'}}>
     <Menu.Item key="mail" >
       <a href="/">Home</a>
     </Menu.Item>
@@ -12,8 +12,8 @@ function LeftMenu(props) {
       <a href="/career">Career</a>
     </Menu.Item>
 
-       <Menu.Item key="album">
-      <a href="/album">Album</a>
+       <Menu.Item key="project">
+      <a href="/project">Projects</a>
     </Menu.Item>
    
   </Menu>

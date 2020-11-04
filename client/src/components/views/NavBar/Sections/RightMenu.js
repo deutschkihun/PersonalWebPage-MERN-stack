@@ -25,7 +25,7 @@ function RightMenu(props) {
 
   if (user.userData && !user.userData.isAuth) {
     return (
-      <Menu mode={props.mode} style={{fontFamily:'Comic Sans MS, Comic Sans, cursive',backgroundColor:'rgb(223 223 226)'}}>
+      <Menu mode={props.mode} style={{fontFamily:'Comic Sans MS, Comic Sans, cursive'}}>
         <Menu.Item key="mail">
           <a href="/login">Signin</a>
         </Menu.Item>
@@ -36,7 +36,7 @@ function RightMenu(props) {
     )
   } else {
     return (
-      <Menu mode={props.mode} style={{fontFamily:'Comic Sans MS, Comic Sans, cursive',backgroundColor:'rgb(223 223 226)'}}>
+      <Menu mode={props.mode} style={{fontFamily:'Comic Sans MS, Comic Sans, cursive'}}>
         <Menu.Item key="app">
           <a href="/video">video upload</a>
         </Menu.Item>

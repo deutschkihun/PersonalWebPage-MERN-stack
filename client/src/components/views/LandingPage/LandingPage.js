@@ -34,10 +34,11 @@ function LandingPage() {
         <div key={index} style={{ position: 'relative' }}>
             <a href={`/video/${video._id}`} >
                 <img style={{ width: '100%' }} alt="thumbnail" src={`http://localhost:5000/${video.thumbnail}`} />
-                <div style={{
-                    bottom:"0", right:"0",position:"absolute",margin:'4px',color:'#fff',backgroundColor:'rgba(17,17,17,0.8)',
-                    opacity:'0.8',padding:'2px 4px',borderRadius:'2px',letterSpacing:'0.5px',fontSize:'12px',fontWeight:'500',lineHeight:'12px'
-                }}>
+                 <div 
+                    style={{ bottom: 0, right:0, position: 'absolute', margin: '4px', 
+                    color: '#fff', backgroundColor: 'rgba(17, 17, 17, 0.8)', opacity: 0.8, 
+                    padding: '2px 4px', borderRadius:'2px', letterSpacing:'0.5px', fontSize:'12px',
+                    fontWeight:'500', lineHeight:'12px' }}>
                     <span>{minutes} : {seconds}</span>
                 </div>
             </a>
@@ -80,19 +81,19 @@ function LandingPage() {
                         <p style={{fontSize:'1.5rem'}}>Coding Enthusiast</p>
                             <a href="https://github.com/deutschkihun" target="_blank">
                             <Avatar
-                                style={{backgroundColor: '#1c1c1c'}}  
+                                style={{color:'skyblue',backgroundColor:'transparent'}}  
                                 icon={<GithubFilled />}
-                            /> </a>
+                            /></a>
 
                             <a href="https://www.linkedin.com/in/kihun-kim-b35b73174/" target="_blank">
                             <Avatar
-                                style={{backgroundColor: '#1c1c1c'}}  
+                                style={{color:'skyblue',backgroundColor:'transparent'}}  
                                 icon={<LinkedinFilled />}
-                            /> </a>
+                            /></a>
 
                             <a href="mailto:deutschkihun@gmail.com">
                             <Avatar
-                                style={{backgroundColor: '#1c1c1c'}}  
+                                style={{color:'skyblue',backgroundColor:'transparent'}}  
                                 icon={<MailFilled />}
                             /></a>
                     </div>
@@ -103,12 +104,12 @@ function LandingPage() {
                 <br/>
                 <br/>
                 <br/>
-                <div className="app1">
-                    <p style={{marginLeft:'33rem',fontSize:'2rem', fontFamily:'Comic Sans MS, Comic Sans, cursive'}}>
-                        <FaCode style={{ fontSize: '1.5rem' }} /> LIFE MOTTO <FaCode style={{ fontSize: '1.5rem' }} />
+                <div>
+                    <p style={{display:'flex',justifyContent:'center',fontSize:'2rem', fontFamily:'Comic Sans MS, Comic Sans, cursive'}}>
+                        <FaCode style={{ fontSize: '3rem' }}/> &nbsp; LIFE MOTTO &nbsp; <FaCode style={{ fontSize: '3rem' }}/>
                     </p>
-                    <span style={{marginLeft:'16rem',fontSize:'2rem', fontFamily:'Comic Sans MS, Comic Sans, cursive'}}>
-                      YOUR EFFORT WONT'T BETRAY YOU NEVER GIVE UP </span>
+                    <span style={{display:'flex',justifyContent:'center',fontSize:'2rem', fontFamily:'Comic Sans MS, Comic Sans, cursive'}}>
+                      YOUR EFFORT WONT'T BETRAY YOU.... NEVER GIVE UP </span>
                 </div>
                 <br/>
                 <br/>
