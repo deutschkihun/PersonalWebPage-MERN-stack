@@ -1,5 +1,4 @@
-import andrena from '../src/components/views/common/dataimage/andrena.png'
-import dillinger_huette from '../src/components/views/common/dataimage/dillinger_huette.png'
+import andrena from '../src/components/views/common/dataimage/andrena.JPG'
 import login_out from '../src/components/views/common/dataimage/login_out.jpg'
 import moiveapp from '../src/components/views/common/dataimage/movieapp.jpg'
 import naverclone from '../src/components/views/common/dataimage/naverclone.jpg'
@@ -76,15 +75,6 @@ const projects = [
     img: ordersystem,
     desc : `This project is aiming to make a backend framework for ordering system with spring boot`,
     completion : 'yes'
-  },
-
-  {
-    id: 8,
-    title : `Seminar Pfannennummererkennung mit Deep learning`,
-    language : 'Python',
-    img : dillinger_huette,
-    desc : `In this seminar I have to make a deep learning model that it can recongnize the number on the blast furnace. This seminar is a corporation project with "Dillinger Hütte" `,
-    completion : `in progress`
   }
 ];
 export default projects; 

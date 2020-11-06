@@ -1,5 +1,6 @@
 import React from 'react'
 import {Button,Card} from 'antd'
+import {FaQuoteRight } from 'react-icons/fa';
 import '../../../main.css'
 import profile from '../common/profile.png'
 import udacity from '../common/udacity.JPG'
@@ -25,20 +26,32 @@ function CareerPage() {
                 <br/> 
             </div>
                 <div className="main-container">
-                    <div className=" box-one">
-                        <img src={profile} alt="profile" width="300" height="320"/>
-                    </div>
-                    <div className=" box-two-1"> <p>Student / Full Stack Developer<br/><h3>Kihun Kim</h3> </p> </div>
-                    <div className=" box-two-2">   <p>Hello Kihun is here, I'm studying industrial engineering at KIT. Industrial engineering is the interdisciplinary study field, which mean student can 
-                                                    learn business and technology together. For both part I focus on computer science and coding mainly. 
-                                                    <br/>
-                                                    So my career goal is to become a software engineer and further make my on business with coding. In my study, especially on Math I made a great academical achievement.
-                                                    Nowaday I'm spending almost whole time to learn coding and create a full stack development project.
-                                                    In the free time I work out or cooking something for my friends.
-                                                    </p> 
-                    </div>
-                    
-                    <div className=" box-two-3">
+
+
+
+
+                    <article className="box-one">
+                        <div className="img-container">
+                            <img src={profile} alt="profile" className='person-img'/>
+                            <span className='quote-icon'>
+                                <FaQuoteRight />
+                            </span>
+                        </div>
+
+                        <h4 className='author'>Kihun Kim</h4>
+                        <p className='job'>Student / Full stack developer / Coding Enthusiast</p>
+                        <p className='info'>
+                        Hello Kihun is here, I'm studying industrial engineering at KIT. Industrial engineering is the interdisciplinary study field,
+                        So students have a chance to get to know business and engineering together.For both part I mainly focus on computer sciecne and mathematics.
+                        <br/>
+                        So my career goal is to become a software engineer and further make my on business with coding. Normally I spend my time to learn coding 
+                        make my own personal project or try to get a chance to practice coding in many different ways
+                        </p>
+                    </article>
+
+
+
+                    <div className=" box-two">
                         <a href="https://drive.google.com/file/d/1C74AepUOLJbCUR66ee-fhLKMZlVHvFc9/view?usp=sharing" target="_blank">
                             <Button>Download CV</Button>
                         </a>
