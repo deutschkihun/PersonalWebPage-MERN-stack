@@ -38,3 +38,30 @@ input.error {
   height: 5px;
   margin-top: -12px;
 }
+
+.error-page {
+  margin-top: 15rem;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+.error-container {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.btn-primary {
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  color: var(--primaryColor);
+  border: 2px solid var(--primaryColor);
+  padding: 0.45rem 0.8rem;
+  display: inline-block;
+  transition: var(--mainTransition);
+  cursor: pointer;
+  font-size: 0.8rem;
+  background: transparent;
+  border-radius: var(--mainBorderRadius);
+  display: inline-block;
+  font-size: 20px;
+}

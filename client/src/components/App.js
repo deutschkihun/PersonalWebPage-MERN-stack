@@ -2,6 +2,7 @@ import React, { Suspense } from 'react';
 import { Route, Switch } from "react-router-dom";
 import Auth from "../hoc/auth";
 // pages for this product
+import Error from './Error/Error';
 import LandingPage from "./views/LandingPage/LandingPage.js";
 import LoginPage from "./views/LoginPage/LoginPage.js";
 import RegisterPage from "./views/RegisterPage/RegisterPage.js";
@@ -29,7 +30,9 @@ function App() {
           <Route exact path="/career" component={Auth(CareerPage, null)} />
           <Route exact path="/project" component={Auth(ProjectPage, null)} />
 
-
+          <Route path="*">
+            <Error/>
+          </Route>
         </Switch>
       </div>
       <Footer />

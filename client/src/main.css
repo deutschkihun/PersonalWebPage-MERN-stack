@@ -8,7 +8,7 @@ main {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 균일한 크기로 3등분 */
   grid-template-rows: repeat(
-    22,
+    24,
     80px
   ); /* 40px로 24등분 -> <main> 영역의 전체 height가 계산된다면 height 지정 후 1fr로 사용하셔도 좋습니다.*/
   gap: 10px;
@@ -68,7 +68,7 @@ main {
   padding-top: 0.8rem;
   text-align: center;
   font-size: 30px;
-  border: 1px solid black;
+  border-bottom: 2px solid black;
   grid-column: 1 / 5;
   grid-row: 6 / 7;
 }
@@ -128,7 +128,7 @@ main {
   padding-top: 0.8rem;
   text-align: center;
   font-size: 30px;
-  border: 1px solid black;
+  border-bottom: 2px solid black;
   grid-column: 1 / 5;
   grid-row: 11 / 12;
 }
@@ -196,7 +196,7 @@ main {
   padding-top: 0.8rem;
   text-align: center;
   font-size: 30px;
-  border: 1px solid black;
+  border-bottom: 2px solid black;
   grid-column: 1 / 5;
   grid-row: 16 / 17;
 }
@@ -217,6 +217,11 @@ main {
   text-align: center;
   grid-column: 1 / 3;
   grid-row: 21 / 23;
+}
+.box-ten-4 {
+  text-align: center;
+  grid-column: 1 / 3;
+  grid-row: 23 / 25;
 }
 
 .box-eleven-1 {
@@ -288,5 +293,29 @@ main {
 }
 
 .box-eleven-3 ul > li {
+  font-size: 15px;
+}
+
+.box-eleven-4 {
+  padding-top: 0.8rem;
+  text-align: center;
+  grid-column: 3 / 5;
+  grid-row: 23 / 25;
+}
+
+.box-eleven-4 p {
+  margin-bottom: 1.5px;
+  font-size: 25px;
+}
+
+.box-eleven-4 Button {
+  background-color: #1890ff;
+  width: 40%;
+  height: 28px;
+  color: white;
+  font-size: 15px;
+}
+
+.box-eleven-4 ul > li {
   font-size: 15px;
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button,Card,Avatar} from 'antd'
+import {Button,Card} from 'antd'
 import '../../../main.css'
 import profile from '../common/profile.png'
 import udacity from '../common/udacity.JPG'
@@ -8,7 +8,9 @@ import mintcolleg from '../common/mintcolleg.png'
 import git from '../common/git.png'
 import github from '../common/github.png'
 import javascript from '../common/3stack.png'
-import {BulbFilled} from '@ant-design/icons'
+import tensorflow from '../common/tensorflow.png'
+import google from '../common/google.png'
+
 const {Meta} = Card;
 
 function CareerPage() {
@@ -47,6 +49,7 @@ function CareerPage() {
                     </div>
 
                     <div className=" box-three">ACADEMIC BACKGROUND</div>
+               
                     <div className=" box-four-1">
                         <a href="https://www.kit.edu/" target="_blank">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Logo_KIT.svg/2000px-Logo_KIT.svg.png"
@@ -80,6 +83,7 @@ function CareerPage() {
                         </a></li>
                         </ul>
                     </div>
+                    
                     <div className=" box-six">WORKING EXPERIENCE</div>
                     <div className=" box-seven-1">
                         <p style={{display:'inline-flex'}}>Working Student</p>
@@ -117,7 +121,7 @@ function CareerPage() {
                          width='250' height='200'alt="kit"/>  
                         </a>
                     </div>
-                    <div className=" box-nine">PROGRAMMING SKILLS</div>
+                    <div className=" box-nine">PROGRAMMING SKILLS </div>
                     <div className=" box-ten-1">
                         <img src="https://camo.githubusercontent.com/585d02eb537edcb1ba9d7ca79d6e1c5a3328aa2d/68747470733a2f2f692e696d6775722e636f6d2f45543747484d342e706e67"
                          width='300' height='130'alt="kit"/>  
@@ -134,6 +138,12 @@ function CareerPage() {
                         <img src={git} width='130' height='130'alt="kit"/>  
                         <img src={github} width='130' height='130'alt="kit"/>  
                     </div>
+                    <div className=" box-ten-4">
+                        <img src={tensorflow} width='280' height='130'alt="kit"/> 
+                        <img src={google} width='180' height='200'alt="kit"/>  
+ 
+                    </div>
+
                     <div className=" box-eleven-1">
                         <p style={{display:'inline-flex'}}>MERN Stack</p>
                         <ul style={{textAlign:'left'}}>
@@ -168,6 +178,19 @@ function CareerPage() {
                         </a></li>
                         </ul>
                     </div>
+
+                    <div className=" box-eleven-4">
+                         <p style={{display:'inline-flex'}}>Machine learning with Tensorflow</p>
+                        <ul style={{textAlign:'left'}}>
+                            <li>Machine learning library tensorflow certificate</li>
+                            <li>issued by Tesorflow & Google</li>
+                            <li>Basic knowledge of time series & NLP & image classification </li>
+                            <li><a href="https://drive.google.com/file/d/1gI0IZuz2WZL8H7CxLOFDwApnyEwgpRkE/view?usp=sharing" target="_blank">
+                            <Button>See certificate</Button>
+                        </a></li>
+                        </ul>
+                    </div>
+
 
                 </div>
              <div>
