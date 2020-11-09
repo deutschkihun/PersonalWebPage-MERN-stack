@@ -12,7 +12,7 @@ function SingleComment(props) {
     
     
     const user = useSelector(state => state.user)
-    const [OpenReply, setOpenReply] = useState(false)  // true false = > &&   , null / notnull => ? 
+    const [OpenReply, setOpenReply] = useState(false)  
     const [commentValue, setcommentValue] = useState("")
     
     const onClickReplayOpen = () => {
@@ -75,8 +75,9 @@ function SingleComment(props) {
                 rows={4} 
             />
             <br/>
-            <Button style={{ width:'10%', height:'35px',marginTop:'0.5rem',float:'right',
+            <Button style={{ width:'10%', height:'35px',marginTop:'0.5rem',
                              backgroundColor:'#1890ff',color:'white',fontSize:'16px'}} onClick={onSubmit} >Submit</Button>
+            <br/><br/><br/><br/>
             </form>
 
         }

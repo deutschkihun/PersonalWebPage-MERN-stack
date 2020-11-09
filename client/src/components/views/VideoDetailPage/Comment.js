@@ -50,8 +50,9 @@ function Comment(props) {
                 rows={4} 
             />
             <br/>
-            <Button style={{ width:'10%', height:'35px',marginTop:'0.5rem',float:'right',
-                             backgroundColor:'#1890ff',color:'white',fontSize:'16px'}} onClick={onSubmit} >Submit</Button>            
+            <Button style={{ width:'10%', height:'35px',marginTop:'0.5rem',
+                             backgroundColor:'#1890ff',color:'white',fontSize:'16px'}} onClick={onSubmit} >Submit</Button>  
+            <br/><br/><br/><br/>                           
             </form>
     
 

@@ -19,8 +19,7 @@ router.post("/saveComment", (req,res) =>{
   
    const comment = new Comment(req.body)
    comment.save((err,comment) => {
-       if(err) return res.status(400).send(err)
-
+       if(err) return res.status(400).json({success:false,err})
     Comment.find({'_id'  : comment._id})
         .populate('writer')
         .exec((err,result) => {
