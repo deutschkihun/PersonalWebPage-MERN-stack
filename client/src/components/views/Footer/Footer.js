@@ -17,12 +17,12 @@ function Footer() {
                 </div>
             </nav>
             <span style={{justifyContent:"center"}}>
-                <a  href="https://github.com/deutschkihun" target="_blank">
+                <a  href="https://github.com/deutschkihun" rel="noopener noreferrer" target="_blank">
                         <Avatar
                             style={{color:'black',backgroundColor:'rgb(223 223 226)'}}  
                             icon={<GithubFilled />}
                         /> </a>
-                 <a href="https://www.linkedin.com/in/kihun-kim-b35b73174/" target="_blank">
+                 <a href="https://www.linkedin.com/in/kihun-kim-b35b73174/" rel="noopener noreferrer" target="_blank">
                         <Avatar
                             style={{color:'black',backgroundColor:'rgb(223 223 226)'}}
                             icon={<LinkedinFilled />}

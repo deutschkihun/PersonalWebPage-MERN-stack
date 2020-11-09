@@ -79,13 +79,13 @@ function LandingPage() {
                     fontFamily:"Comic Sans MS, Comic Sans, cursive",color:'white'}}>
                         <h1 style={{color:'white',fontSize:'3rem',lineHeight:'8px'}}>Kihun Kim</h1>
                         <p style={{fontSize:'1.5rem'}}>Coding Enthusiast</p>
-                            <a href="https://github.com/deutschkihun" target="_blank">
+                            <a href="https://github.com/deutschkihun" rel="noopener noreferrer" target="_blank">
                             <Avatar
                                 style={{color:'skyblue',backgroundColor:'transparent'}}  
                                 icon={<GithubFilled />}
                             /></a>
 
-                            <a href="https://www.linkedin.com/in/kihun-kim-b35b73174/" target="_blank">
+                            <a href="https://www.linkedin.com/in/kihun-kim-b35b73174/" rel="noopener noreferrer" target="_blank">
                             <Avatar
                                 style={{color:'skyblue',backgroundColor:'transparent'}}  
                                 icon={<LinkedinFilled />}

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button,Card} from 'antd'
+import {Button} from 'antd'
 import {FaQuoteRight } from 'react-icons/fa';
 import '../../../main.css'
 import profile from '../common/profile.png'
@@ -11,9 +11,6 @@ import github from '../common/github.png'
 import javascript from '../common/3stack.png'
 import tensorflow from '../common/tensorflow.png'
 import google from '../common/google.png'
-
-const {Meta} = Card;
-
 function CareerPage() {
     return (
         <div>
@@ -52,7 +49,7 @@ function CareerPage() {
 
 
                     <div className=" box-two">
-                        <a href="https://drive.google.com/file/d/1C74AepUOLJbCUR66ee-fhLKMZlVHvFc9/view?usp=sharing" target="_blank">
+                        <a href="https://drive.google.com/file/d/1C74AepUOLJbCUR66ee-fhLKMZlVHvFc9/view?usp=sharing"  rel="noopener noreferrer" target="_blank">
                             <Button>Download CV</Button>
                         </a>
                         &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -64,13 +61,13 @@ function CareerPage() {
                     <div className=" box-three">ACADEMIC BACKGROUND</div>
                
                     <div className=" box-four-1">
-                        <a href="https://www.kit.edu/" target="_blank">
+                        <a href="https://www.kit.edu/" rel="noopener noreferrer" target="_blank">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Logo_KIT.svg/2000px-Logo_KIT.svg.png"
                          width='250' height='130'alt="kit"/>  
                         </a>
                     </div>
                     <div className=" box-four-2">
-                      <a href="https://www.udacity.com/course/data-analyst-nanodegree--nd002" target="_blank">
+                      <a href="https://www.udacity.com/course/data-analyst-nanodegree--nd002" rel="noopener noreferrer" target="_blank">
                             <img src={udacity}
                          width='500' height='130'alt="kit"/>  
                         </a>  
@@ -91,7 +88,7 @@ function CareerPage() {
                             <li>Provided by Udacity</li>
                             <li>From Feb. 2020 to May 2020</li>
                             <li>Python programing for data analysis with statistic background</li>
-                            <li><a href="https://drive.google.com/file/d/1bSGPpEvvfNC6ZjTMYVsgNm9azys5aT6N/view?usp=sharing" target="_blank">
+                            <li><a href="https://drive.google.com/file/d/1bSGPpEvvfNC6ZjTMYVsgNm9azys5aT6N/view?usp=sharing" rel="noopener noreferrer" target="_blank">
                             <Button>See Certificate</Button>
                         </a></li>
                         </ul>
@@ -104,7 +101,7 @@ function CareerPage() {
                             <li>Customoer recipt data management</li>
                             <li>Daily data warehouse controlling with SQL</li>
                             <li>Debug reporting of data warehouse with SQL</li>
-                            <li><a href="https://drive.google.com/file/d/1hcUIODMNDrFPiHijQib1IXmngAGTFtWB/view?usp=sharing" target="_blank">
+                            <li><a href="https://drive.google.com/file/d/1hcUIODMNDrFPiHijQib1IXmngAGTFtWB/view?usp=sharing" rel="noopener noreferrer" target="_blank">
                             <Button>Employment reference</Button>
                         </a></li>
                         </ul>
@@ -116,20 +113,20 @@ function CareerPage() {
                             <li>Explanation of excercise</li>
                             <li>Lead question and answer session</li>
                             <li>Lecture field: Integral,Derivative,log & exponential function</li>
-                            <li><a href="https://drive.google.com/file/d/10wy637QRz0jTBr2QOn4LOPpaR5FTH-Uk/view?usp=sharing" target="_blank">
+                            <li><a href="https://drive.google.com/file/d/10wy637QRz0jTBr2QOn4LOPpaR5FTH-Uk/view?usp=sharing" rel="noopener noreferrer" target="_blank">
                             <Button>Employment reference</Button>
                         </a></li>
                         </ul>
                     </div>
 
                     <div className=" box-eight-1">
-                        <a href="https://www.dm-jobs.com/dmTECH/?locale=de_DE" target="_blank">
+                        <a href="https://www.dm-jobs.com/dmTECH/?locale=de_DE"  rel="noopener noreferrer" target="_blank">
                             <img src={dmtech}
                          width='200' height='130'alt="kit"/>  
                         </a>
                     </div>
                     <div className=" box-eight-2">
-                        <a href="https://www.mint-kolleg.kit.edu/" target="_blank">
+                        <a href="https://www.mint-kolleg.kit.edu/" rel="noopener noreferrer" target="_blank">
                             <img src={mintcolleg}
                          width='250' height='200'alt="kit"/>  
                         </a>
@@ -186,7 +183,7 @@ function CareerPage() {
                             <li>Most popular distributed version control system</li>
                             <li>Tracking changes in source code during software development</li>
                             <li>All my projects are managed by Git and Github</li>
-                            <li><a href="https://github.com/deutschkihun?tab=repositories" target="_blank">
+                            <li><a href="https://github.com/deutschkihun?tab=repositories"  rel="noopener noreferrer" target="_blank">
                             <Button>See my Repository</Button>
                         </a></li>
                         </ul>
@@ -198,7 +195,7 @@ function CareerPage() {
                             <li>Machine learning library tensorflow certificate</li>
                             <li>issued by Tesorflow & Google</li>
                             <li>Basic knowledge of time series & NLP & image classification </li>
-                            <li><a href="https://drive.google.com/file/d/1gI0IZuz2WZL8H7CxLOFDwApnyEwgpRkE/view?usp=sharing" target="_blank">
+                            <li><a href="https://drive.google.com/file/d/1gI0IZuz2WZL8H7CxLOFDwApnyEwgpRkE/view?usp=sharing" rel="noopener noreferrer" target="_blank">
                             <Button>See certificate</Button>
                         </a></li>
                         </ul>

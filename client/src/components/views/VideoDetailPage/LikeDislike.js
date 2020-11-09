@@ -38,7 +38,6 @@ function LikeDislike(props) {
                     alert('fail to get like')
                 }
             })
-
         Axios.post('/api/like/getdislikes',variable)
             .then(response => {
                 if(response.data.success){

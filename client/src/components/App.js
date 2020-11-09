@@ -5,13 +5,14 @@ import Auth from "../hoc/auth";
 import Error from './Error/Error';
 import LandingPage from "./views/LandingPage/LandingPage.js";
 import LoginPage from "./views/LoginPage/LoginPage.js";
-import RegisterPage from "./views/RegisterPage/RegisterPage.js";
+// import RegisterPage from "./views/RegisterPage/RegisterPage.js";
 import NavBar from "./views/NavBar/NavBar";
 import Footer from "./views/Footer/Footer"
 import VideoUploadPage from './views/VideoUploadPage/VideoUploadPage';
 import VideoDetailPage from './views/VideoDetailPage/VideoDetailPage';
 import CareerPage from './views/CareerPage/CareerPage';
 import ProjectPage from './views/ProjectPage/ProjectPage'
+import ProjectPageDetail from './views/ProjectPage/ProjectPageDetail'
 //null   Anyone Can go inside
 //true   only logged in user can go inside
 //false  logged in user can't go inside
@@ -24,11 +25,13 @@ function App() {
         <Switch>
           <Route exact path="/" component={Auth(LandingPage, null)} />
           <Route exact path="/login" component={Auth(LoginPage, false)} />
-          <Route exact path="/register" component={Auth(RegisterPage, false)} />
+          {/* <Route exact path="/register" component={Auth(RegisterPage, false)} /> */}
           <Route exact path="/video" component={Auth(VideoUploadPage, true)} />
           <Route exact path="/video/:videoId" component={Auth(VideoDetailPage, null)} />
           <Route exact path="/career" component={Auth(CareerPage, null)} />
           <Route exact path="/project" component={Auth(ProjectPage, null)} />
+          <Route exact path="/project/:projectid" component={Auth(ProjectPageDetail, null)} />
+
 
           <Route path="*">
             <Error/>

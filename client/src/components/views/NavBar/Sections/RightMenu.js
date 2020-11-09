@@ -27,11 +27,11 @@ function RightMenu(props) {
     return (
       <Menu mode={props.mode} style={{fontFamily:'Comic Sans MS, Comic Sans, cursive'}}>
         <Menu.Item key="mail">
-          <a href="/login">Signin</a>
+          <a href="/login">Sign-in</a>
         </Menu.Item>
-        <Menu.Item key="app">
+        {/* <Menu.Item key="app">
           <a href="/register">Signup</a>
-        </Menu.Item>
+        </Menu.Item> */}
       </Menu>
     )
   } else {

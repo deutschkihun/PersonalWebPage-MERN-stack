@@ -16,9 +16,9 @@ function NavBar() {
   };
 
   return (
-    <nav className="menu" style={{ position: 'fixed', zIndex: 5, width: '100%'}}>
+    <nav className="menu" style={{ position: 'fixed', zIndex: 5, width: '100%',fontFamily:'Comic Sans MS, Comic Sans, cursive'}}>
       <div className="menu__logo">
-        <a href="/">Logo</a>
+  <a href="/" style={{}}>HuniCode</a>
       </div>
       <div className="menu__container">
         <div className="menu_left">

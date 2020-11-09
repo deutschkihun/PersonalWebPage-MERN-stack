@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{} from 'react'
 import {Card,Col,Typography,Row,Avatar} from 'antd'
 import projects from '../../../data'
 import {FundProjectionScreenOutlined} from '@ant-design/icons';
@@ -10,7 +10,7 @@ function ProjectPage() {
 
 
     const projectCards = projects.map((project) => {
-      const {id,title,language,img,desc,completion} = project
+      const {id,title,img} = project
       return (
         <Col lg={8} md={12} xs={24} style={{paddingBottom:'3rem'}}>     
           <div key={id} style={{ position:'relative'}}>
@@ -50,3 +50,9 @@ function ProjectPage() {
 }
 
 export default ProjectPage
+
+
+
+
+
+
