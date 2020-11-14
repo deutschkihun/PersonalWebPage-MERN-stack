@@ -12,9 +12,9 @@ Hello
 
 **This project contains following functionalities**
 
-1. movie list
-2. movie detail information
-3. favorite page
+1. Introduction video in 3 different language (deutsch,english,korean)
+2. Career page
+3. Project page
 
 ### dev.js & mongo db setting
 
