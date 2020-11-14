@@ -12,9 +12,6 @@ services:
 before_install:
   - docker build -t deutschkihun/portfolio -f ./frontend/Dockerfile.dev ./frontend
 
-script:
-  - docker run -e CI=true deutschkihun/portfolio npm run test -- --coverage
-
 after_success:
   - docker build -t deutschkihun/docker-frontend ./frontend
   - docker build -t deutschkihun/docker-backend ./backend
