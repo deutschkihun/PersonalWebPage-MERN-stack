@@ -25,14 +25,9 @@ services:
     container_name: app_backend
     ports:
       - "5000:5000"
-    depends_on:
-      - mongo
     volumes:
       - /app/node_modules
       - ./backend:/app
-
-  mongo:
-    container_name: mongodb
-    image: mongo
-    ports:
-      - "27017:27017"
+    environment:
+      - MONGO_URI: "mongodb+srv://deutschkihun2:rlgns48126@kihun.0wyb3.mongodb.net/<dbname>?retryWrites=true&w=majority"
+      - NODE_ENV: "production"
